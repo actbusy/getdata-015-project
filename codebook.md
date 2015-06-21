@@ -1,6 +1,7 @@
 # Codebook for script output
 
 subject - id of volunteer test subject
+
 activity - one of six activities performed by subject:
 
     1. WALKING
