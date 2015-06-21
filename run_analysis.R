@@ -25,10 +25,6 @@ keep_features <- setdiff(
 #   file     - path to measurement data set (e.g. 'test/X_test.txt')
 readXs <- function(file) {
     df = read.table(file, col.names=features)
-    #keep_cols = setdiff(
-    #    grep('mean|std', colnames),
-    #    grep('meanFreq', colnames)
-    #)
     df[, keep_features]
 }
 
