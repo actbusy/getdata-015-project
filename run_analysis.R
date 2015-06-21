@@ -1,6 +1,6 @@
 # Solution to assignment
 # assumes UCI_dataset.zip is unzipped into working directory
-# see function definition 'avgActivityBySubject'
+# see function 'avgActivityBySubject' and 'writeTidyDataset'
 
 # reads and returns vector of feature names removing parenthesis
 readFeatures <- function(file) {
@@ -78,8 +78,16 @@ avgActivityBySubject <- function() {
     )
     
     # prefix column names to denote averages
-    colnames(by_sub_act)[3:68] = sub('^', 'avg.', colnames(by_sub_act)[3:68])
+    colnames(avg_sub_act)[3:68] = sub('^', 'avg.', colnames(avg_sub_act)[3:68])
     
     avg_sub_act
 }
+
+# writes the tidy dataset to a text file
+writeTidyDataset <- function(outputfile) {
+    data = avgActivityBySubject()
+    write.table(data, file=outputfile, row.name=FALSE)
+    print(sprintf('output written to %s', outputfile))
+}
+
 
