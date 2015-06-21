@@ -1,6 +1,18 @@
 # getdata-015 project
 
-Merges and creates tidy data set containing average measurements per test subject per activities.
+Creates new data set from Samsung accelerometers data by
+
+1. merging training and test data:
+  1. join `X_test.txt`, `y_test.txt`, `subject_test.txt`
+  2. join `X_train.txt`, `y_train.txt`, `subject_train.txt`
+  3. combine the rows from above joins
+
+2. selecting measurements on mean and standard deviation:
+  1. feature labels read and modified from `features.txt`
+
+3. labels activities with descriptive names from `activity_labels.txt`
+
+4. calculate average value for each measurement per subject per activity
 
 ## Prequisite
 
@@ -10,8 +22,8 @@ Merges and creates tidy data set containing average measurements per test subjec
 
 1. place `run_analysis.R` in working directory, you should have the following items in directory:
 
-    * run_analysis.R
-    * UCI HAR Dataset
+    * `run_analysis.R`
+    * `UCI HAR Dataset`
 
 2. run R in working directory
 
