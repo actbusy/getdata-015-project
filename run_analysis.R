@@ -38,8 +38,7 @@ readXs <- function(file) {
 #   xfile           - file path to data set (e.g. 'test/X_test.txt')
 #   yfile           - file path to labels (e.g. 'test/y_test.txt')
 #   subjectfile     - file path to subjects (e.g. 'test/subject_test.txt')
-readData <- function(
-    xfile, yfile, subjectfile) {
+readData <- function(xfile, yfile, subjectfile) {
     xs = readXs(xfile)
     ys = read.table(yfile)
     
